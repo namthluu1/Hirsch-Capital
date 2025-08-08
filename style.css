@@ -1,0 +1,275 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+/* For titles/headings */
+h1, h2, h3, .tagline, .option-title {
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* === HERO SECTION === */
+.hero {
+  background: url('assets/background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(10, 10, 20, 0.5);
+  z-index: 1;
+}
+
+/* Top-left logo */
+.top-left-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.top-left-logo img {
+  width: 70px;
+  height: auto;
+}
+
+/* Navbar */
+/* Navbar aligned with top-left logo and pushed down */
+.navbar {
+  position: absolute;
+  top: 40px; /* increased from 20px */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5em;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400; /* normal weight */
+  font-size: 1.05em; /* slightly smaller */
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #cce4ff;
+}
+
+/* Main logo and tagline */
+.hero-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -60px;
+}
+
+.main-logo {
+  width: 800px;
+  max-width: 90vw;
+  height: auto;
+  margin-bottom: 0.6em;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+.tagline {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: #e0e0e0;
+}
+
+/* === DESCRIPTION SECTION === */
+.description-section {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 4em 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.description-container {
+  max-width: 900px;
+  font-size: 1.1em;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* === OPTIONS SECTION === */
+.options-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding: 4em 2em;
+  background-color: #fff;
+}
+
+.option {
+  flex: 1 1 300px;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.option:hover {
+  transform: scale(1.03);
+}
+
+.option img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.option-title {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 1em;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* ABOUT PAGE STYLES */
+
+.about-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.about-hero {
+  background: url('assets/about-hero.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 10em 1em 4em;
+  position: relative;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* darkens the image */
+  z-index: 0;
+}
+
+.about-hero h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.about-section {
+  padding: 3em 2em;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-section h2 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.about-section.alt {
+  background-color: #f8f9fa;
+}
+
+.team-section {
+  padding: 4em 2em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5em;
+  justify-items: center;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.team-member h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.4em;
+  margin: 0.3em 0 0.2em;
+}
+
+.team-member p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: #555;
+}
+
+.team-hero {
+  background: url('assets/team-hero.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 10em 1em 4em;
+  position: relative;
+}
+
+.team-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+.team-hero h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 3em;
+}
